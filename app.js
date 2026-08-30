@@ -68,7 +68,8 @@ function renderRubric(){
 }
 function renderScoreChoices(key,v,forcedLevel){const li=forcedLevel??(v?levelFor(v):null);if(li===null)return '';const [a,b]=LEVELS[li].range;return `<div class="score-choices" aria-label="Pilih markah">${Array.from({length:b-a+1},(_,i)=>a+i).map(n=>`<button type="button" class="score-choice ${v===n?'active':''}" data-key="${key}" data-score="${n}">${n}</button>`).join('')}</div>`;}
 function chooseLevel(key,li){const item=$(`.rubric-item[data-key="${key}"]`);item.querySelectorAll('.level-btn').forEach((b,i)=>b.classList.toggle('active',i===li));item.querySelector('.score-slot').innerHTML=renderScoreChoices(key,state.scores[key],li);item.querySelector('.rubric-description').textContent=RUBRIC.find(r=>r.key===key).descriptions[li];bindScoreChoices();}
-function bindScoreChoices(){$$('.score-choice').forEach(b=>b.addEventListener('click',()=>{state.scores[b.dataset.key]=+b.dataset.score;renderRubric();}));}
+function bindScoreChoices(){$$('.score-choice').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.key;state.scores[key]=+b.dataset.score;renderRubric();requestAnimationFrame(()=>scrollAfterScore(key));}));}
+function scrollAfterScore(key){const index=RUBRIC.findIndex(r=>r.key===key),next=RUBRIC[index+1],target=next?$(`.rubric-item[data-key="${next.key}"]`):$('.submit-row');if(!target)return;const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;target.scrollIntoView({behavior:reduced?'auto':'smooth',block:next?'center':'end'});}
 function levelFor(v){return LEVELS.findIndex(l=>v>=l.range[0]&&v<=l.range[1]);}
 function updateTotal(){const vals=RUBRIC.map(r=>state.scores[r.key]),total=vals.reduce((a,v)=>a+(v||0),0),complete=vals.every(v=>Number.isInteger(v));$('#floatingTotal strong').textContent=total;$('#submitBtn').disabled=!complete;$('#incompleteHint').textContent=complete?'Semua aspek lengkap. Sila semak sebelum hantar.':'Lengkapkan semua lima aspek untuk menghantar.';}
 
