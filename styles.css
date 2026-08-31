@@ -34,12 +34,19 @@
 .admin-results-screen{padding:26px 0 70px}
 .admin-results-header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
 .admin-results-header h1{margin:0;font:700 clamp(1.8rem,4vw,3rem)/1.1 "Playfair Display",serif}
-.partner-logo-strip{width:min(1180px,calc(100% - 32px));margin:8px auto 0;padding:18px 24px;border:1px solid rgba(255,255,255,.9);border-radius:20px;background:rgba(255,255,255,.72);box-shadow:0 12px 38px rgba(16,35,63,.08)}
-.partner-logo-strip img{display:block;width:100%;height:auto;max-height:205px;object-fit:contain}
+.partner-logo-strip{width:min(1180px,calc(100% - 32px));margin:50px auto 0;padding:0;text-align:center}
+.partner-accent{display:block;width:min(720px,76%);height:4px;margin:0 auto 20px;border-radius:99px;background:linear-gradient(90deg,#0759b5 0 34%,#ffd51e 34% 66%,#ef4348 66% 100%)}
+.partner-logo-strip>.eyebrow{margin-bottom:8px;color:var(--navy);letter-spacing:.18em}
+.partner-logo-crop{height:172px;display:grid;place-items:center;overflow:hidden}
+.partner-logo-crop img{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+footer{padding-top:12px}
 @media(max-width:700px){
   .admin-results-header{align-items:flex-start}
   .admin-results-header .header-brand{align-items:flex-start}
   .admin-results-header .header-brand .mini-brand{display:none}
   .admin-results-header .secondary-btn{white-space:nowrap;padding:10px 12px}
-  .partner-logo-strip{width:calc(100% - 20px);padding:10px 12px;border-radius:14px}
+  .partner-logo-strip{width:calc(100% - 20px);margin-top:34px}
+  .partner-accent{width:82%;margin-bottom:16px}
+  .partner-logo-strip>.eyebrow{font-size:.61rem}
+  .partner-logo-crop{height:92px}
 }
