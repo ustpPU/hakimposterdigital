@@ -11,3 +11,18 @@
 .mini-brand{width:62px;height:62px}
 .brand-mark img,.mini-brand img{display:block;width:100%;height:100%;object-fit:contain}
 .rubric-item{scroll-margin-top:96px}
+
+/* Live judging flow and compact mobile results. */
+.poster-card{scroll-margin-top:86px}
+.filters{grid-template-columns:1fr 180px}
+@media(max-width:850px){
+  .award-section{overflow:visible}
+  .ranking-table{display:block;min-width:0}
+  .ranking-table thead{display:none}
+  .ranking-table tbody{display:grid;gap:12px}
+  .ranking-table tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 24px rgba(16,35,63,.06)}
+  .ranking-table td{display:block;min-width:0;padding:8px 0;background:transparent;border-radius:0!important;overflow-wrap:anywhere}
+  .ranking-table td::before{content:attr(data-label);display:block;margin-bottom:3px;color:var(--muted);font-size:.6rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+  .ranking-table td:nth-child(3){grid-column:1/-1;margin:4px 0;padding:11px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+}
+@media(max-width:560px){.filters{grid-template-columns:1fr}}
