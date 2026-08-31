@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="puice-logo.png" as="image" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260831d">
+  <link rel="stylesheet" href="styles.css?v=20260901a">
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -49,7 +49,7 @@
       </div>
       <button id="closeAdminResults" class="secondary-btn" type="button">← Kembali</button>
     </header>
-    <div class="panel-heading"><div><p class="eyebrow">KEPUTUSAN RASMI</p><h2>Leaderboard PUICE 2026</h2><p>Ranking penuh hanya dipaparkan selepas semua hakim selesai menilai.</p></div><button id="refreshAdminResults" class="secondary-btn" type="button">Muat Semula</button></div>
+    <div class="panel-heading"><div><p class="eyebrow">KEPUTUSAN RASMI</p><h2>Leaderboard Pertandingan Poster Digital PUICE 2026</h2><p>Ranking penuh hanya dipaparkan selepas semua hakim selesai menilai.</p></div><button id="refreshAdminResults" class="secondary-btn" type="button">Muat Semula</button></div>
     <div id="adminLeaderboardContent"></div>
   </main>
 
@@ -118,7 +118,7 @@
     </section>
 
     <section id="leaderboardTab" class="tab-panel">
-      <div class="panel-heading"><div><p class="eyebrow">KEPUTUSAN RASMI</p><h2>Leaderboard PUICE 2026</h2><p>Ranking hanya dibuka selepas semua hakim selesai.</p></div><button id="refreshLeaderboard" class="secondary-btn" type="button">Muat Semula</button></div>
+      <div class="panel-heading"><div><p class="eyebrow">KEPUTUSAN RASMI</p><h2>Leaderboard Pertandingan Poster Digital PUICE 2026</h2><p>Ranking hanya dibuka selepas semua hakim selesai.</p></div><button id="refreshLeaderboard" class="secondary-btn" type="button">Muat Semula</button></div>
       <div id="leaderboardContent"></div>
     </section>
   </main>
@@ -130,12 +130,12 @@
 
   <dialog id="pinDialog" class="modal"><form method="dialog" class="modal-card"><button class="modal-close" value="cancel" aria-label="Tutup">×</button><p class="eyebrow">PENGESAHAN HAKIM</p><div id="pinAvatar" class="avatar-large"></div><h2 id="pinJudgeName"></h2><p>Masukkan PIN enam digit anda.</p><input id="pinInput" class="pin-input" type="password" inputmode="numeric" maxlength="6" autocomplete="one-time-code" aria-label="PIN enam digit"><p id="pinError" class="error-text" aria-live="polite"></p><button id="pinSubmit" class="primary-btn full" type="button">Sahkan & Masuk</button></form></dialog>
 
-  <dialog id="confirmDialog" class="modal"><div class="modal-card confirm-card"><button id="confirmClose" class="modal-close" aria-label="Tutup">×</button><p class="eyebrow">SEMAK SEBELUM HANTAR</p><h2>Pengesahan markah</h2><div id="confirmMeta" class="confirm-meta"></div><div id="confirmScores" class="confirm-scores"></div><div class="confirm-total"><span>Jumlah keseluruhan</span><strong id="confirmTotal">0/100</strong></div><div class="modal-actions"><button id="confirmCancel" class="secondary-btn" type="button">Kembali</button><button id="confirmSubmit" class="primary-btn" type="button">Ya, Simpan Markah</button></div><p id="submitStatus" class="submit-status" aria-live="polite"></p></div></dialog>
+  <dialog id="confirmDialog" class="modal"><div class="modal-card confirm-card"><button id="confirmClose" class="modal-close" aria-label="Tutup">×</button><p class="eyebrow">SEMAK SEBELUM HANTAR</p><h2>Pengesahan markah</h2><div id="confirmMeta" class="confirm-meta"></div><div id="confirmScores" class="confirm-scores"></div><div class="confirm-total"><span>Jumlah keseluruhan</span><strong id="confirmTotal">0/100</strong></div><div id="saveProgress" class="save-progress hidden"><div class="save-progress-head"><span id="saveProgressLabel">Menyediakan simpanan…</span><strong id="saveProgressPercent">0%</strong></div><div class="save-progress-track"><span id="saveProgressBar"></span></div></div><div class="modal-actions"><button id="confirmCancel" class="secondary-btn" type="button">Kembali</button><button id="confirmSubmit" class="primary-btn" type="button">Ya, Simpan Markah</button></div><p id="submitStatus" class="submit-status" aria-live="polite"></p></div></dialog>
 
   <dialog id="posterDialog" class="modal poster-modal"><div class="poster-modal-card"><button id="posterModalClose" class="modal-close" aria-label="Tutup">×</button><img id="posterModalImage" alt="Paparan poster bersaiz besar"><div id="posterModalInfo"></div></div></dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
-  <script src="app.js?v=20260831b" defer></script>
+  <script src="app.js?v=20260901a" defer></script>
 </body>
 </html>
