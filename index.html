@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="puice-logo.png" as="image" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260901a">
+  <link rel="stylesheet" href="styles.css?v=20260901b">
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -36,8 +36,8 @@
     <section id="judgeCards" class="judge-grid" aria-label="Senarai hakim"></section>
     <p class="security-note"><span aria-hidden="true">⌁</span> Pengesahan PIN diperlukan sebelum data poster dibuka.</p>
     <div class="admin-result-entry">
-      <button id="openAdminResults" class="secondary-btn admin-result-btn" type="button"><span aria-hidden="true">♜</span> Lihat Keputusan Semasa</button>
-      <small>Untuk semakan urusetia tanpa membuka borang penjurian hakim.</small>
+      <button id="openAdminResults" class="secondary-btn admin-result-btn" type="button"><span aria-hidden="true">♜</span> Ruang Urusetia</button>
+      <small>Lihat keputusan semasa menggunakan PIN urusetia.</small>
     </div>
   </main>
 
@@ -130,12 +130,14 @@
 
   <dialog id="pinDialog" class="modal"><form method="dialog" class="modal-card"><button class="modal-close" value="cancel" aria-label="Tutup">×</button><p class="eyebrow">PENGESAHAN HAKIM</p><div id="pinAvatar" class="avatar-large"></div><h2 id="pinJudgeName"></h2><p>Masukkan PIN enam digit anda.</p><input id="pinInput" class="pin-input" type="password" inputmode="numeric" maxlength="6" autocomplete="one-time-code" aria-label="PIN enam digit"><p id="pinError" class="error-text" aria-live="polite"></p><button id="pinSubmit" class="primary-btn full" type="button">Sahkan & Masuk</button></form></dialog>
 
+  <dialog id="adminPinDialog" class="modal"><div class="modal-card"><button id="adminPinClose" class="modal-close" aria-label="Tutup">×</button><p class="eyebrow">RUANG URUSETIA</p><h2>Akses keputusan semasa</h2><p>Masukkan PIN urusetia enam digit.</p><input id="adminPinInput" class="pin-input" type="password" inputmode="numeric" maxlength="6" autocomplete="one-time-code" aria-label="PIN urusetia enam digit"><p id="adminPinError" class="error-text" aria-live="polite"></p><button id="adminPinSubmit" class="primary-btn full" type="button">Buka Keputusan</button></div></dialog>
+
   <dialog id="confirmDialog" class="modal"><div class="modal-card confirm-card"><button id="confirmClose" class="modal-close" aria-label="Tutup">×</button><p class="eyebrow">SEMAK SEBELUM HANTAR</p><h2>Pengesahan markah</h2><div id="confirmMeta" class="confirm-meta"></div><div id="confirmScores" class="confirm-scores"></div><div class="confirm-total"><span>Jumlah keseluruhan</span><strong id="confirmTotal">0/100</strong></div><div id="saveProgress" class="save-progress hidden"><div class="save-progress-head"><span id="saveProgressLabel">Menyediakan simpanan…</span><strong id="saveProgressPercent">0%</strong></div><div class="save-progress-track"><span id="saveProgressBar"></span></div></div><div class="modal-actions"><button id="confirmCancel" class="secondary-btn" type="button">Kembali</button><button id="confirmSubmit" class="primary-btn" type="button">Ya, Simpan Markah</button></div><p id="submitStatus" class="submit-status" aria-live="polite"></p></div></dialog>
 
-  <dialog id="posterDialog" class="modal poster-modal"><div class="poster-modal-card"><button id="posterModalClose" class="modal-close" aria-label="Tutup">×</button><img id="posterModalImage" alt="Paparan poster bersaiz besar"><div id="posterModalInfo"></div></div></dialog>
+  <dialog id="posterDialog" class="modal poster-modal"><div class="poster-modal-card"><button id="posterModalClose" class="modal-close" aria-label="Tutup">×</button><div id="posterZoomViewport" class="poster-zoom-viewport"><img id="posterModalImage" alt="Paparan poster bersaiz besar"></div><div class="poster-zoom-controls" aria-label="Kawalan zum poster"><button id="posterZoomOut" type="button" aria-label="Kecilkan poster">−</button><button id="posterZoomReset" type="button">100%</button><button id="posterZoomIn" type="button" aria-label="Besarkan poster">+</button><small>Cubit, seret atau tekan dua kali untuk zum</small></div><div id="posterModalInfo"></div></div></dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
-  <script src="app.js?v=20260901a" defer></script>
+  <script src="app.js?v=20260901b" defer></script>
 </body>
 </html>

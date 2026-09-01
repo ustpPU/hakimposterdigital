@@ -56,3 +56,35 @@ footer{width:100%;padding:20px 16px;background:var(--navy);border-top:4px solid 
 .save-progress-head strong{color:var(--blue)}
 .save-progress-track{height:7px;overflow:hidden;border-radius:99px;background:#dfe6f1}
 .save-progress-track span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .32s ease}
+
+/* Focused judging flow, quieter official theme and touch-friendly poster zoom. */
+.judge-card{min-height:248px}
+.admin-result-btn{background:rgba(255,255,255,.72);color:var(--navy);border:1px solid #cfd9e8;box-shadow:0 8px 24px rgba(16,35,63,.08)}
+.rubric-item{padding:0;overflow:hidden;background:#fff}
+.rubric-item.is-open{border-color:#b9c9e4;box-shadow:0 8px 24px rgba(16,35,63,.06)}
+.rubric-item.completed:not(.is-open){background:#f7fbfa;border-color:#cce7df}
+.rubric-heading{display:block;width:100%;padding:15px 17px;border:0;background:transparent;color:var(--ink);text-align:left}
+.rubric-heading,.rubric-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.rubric-title{justify-content:flex-start}
+.rubric-title>span:last-child{display:grid;gap:3px}
+.rubric-title strong{font-size:.88rem}
+.rubric-title small{color:var(--muted);font-size:.67rem;font-weight:600}
+.rubric-item.completed .rubric-no{background:#e4f5ef;color:#087455}
+.rubric-action{flex:0 0 auto;color:var(--blue);font-size:.68rem;font-weight:800}
+.rubric-body{padding:0 17px 17px;border-top:1px solid #edf1f6}
+.rubric-item:not(.is-open) .rubric-body{display:none}
+.poster-zoom-viewport{display:grid;place-items:center;width:min(90vw,980px);height:min(72vh,760px);padding:0!important;overflow:hidden;background:#0b1422;border-radius:14px;touch-action:none;cursor:grab}
+.poster-zoom-viewport:active{cursor:grabbing}
+.poster-zoom-viewport img{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;transform-origin:center;transition:transform .12s ease;user-select:none;-webkit-user-drag:none}
+.poster-zoom-controls{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 0 2px!important}
+.poster-zoom-controls button{min-width:38px;height:34px;border:1px solid rgba(255,255,255,.16);border-radius:9px;background:rgba(255,255,255,.1);color:#fff;font-weight:800}
+.poster-zoom-controls small{margin-left:8px;color:#aebbcf;font-size:.67rem}
+#posterModalInfo{padding:10px 5px 2px!important}
+@media(max-width:560px){
+ .judge-card{min-height:205px}
+ .rubric-heading{padding:13px 12px}
+ .rubric-body{padding:0 12px 13px}
+ .rubric-title strong{font-size:.78rem}
+ .poster-zoom-viewport{width:calc(100vw - 40px);height:68vh}
+ .poster-zoom-controls small{display:none}
+}
