@@ -16,7 +16,8 @@ PIN tidak disimpan dalam repositori atau HTML. Backend menyimpan hash PIN dan ra
 
 - `index.html` — struktur aplikasi.
 - `styles.css` — reka bentuk responsif dan sokongan reduced motion.
-- `app.js` — aliran penjurian, galeri dan keputusan.
+- `app.js` — aliran penjurian, DQ, galeri dan rumusan hakim.
 - `backend/Code.gs` — sumber backend Google Apps Script.
+- `pemenang/` — halaman keputusan rasmi awam selepas penjurian lengkap.
 
 © Unit Sumber Teknologi Pendidikan PPDPU | PUICE 2026
