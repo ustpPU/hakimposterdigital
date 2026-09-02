@@ -104,3 +104,12 @@ footer{width:100%;padding:20px 16px;background:var(--navy);border-top:4px solid 
 .modal-judge-btn{width:100%;margin-top:14px}
 #posterModalInfo .confirm-scores{margin-top:14px}
 @media(max-width:560px){.judge-greeting{margin-left:2px;font-size:1rem}.modal-image-state>div{display:grid}.modal-image-state .secondary-btn{width:100%}}
+
+/* Official landscape poster frame. Portrait entries are intentionally cropped to the required format. */
+.poster-stage{min-height:0;aspect-ratio:16/9}
+.poster-stage img{max-height:none;object-fit:cover}
+.poster-zoom-viewport{width:min(90vw,980px);height:auto;aspect-ratio:16/9}
+.poster-zoom-viewport img{object-fit:cover}
+.modal-drive-preview{min-height:0}
+@media(max-width:850px){.poster-stage{min-height:0}}
+@media(max-width:560px){.poster-stage{min-height:0}.poster-zoom-viewport{width:calc(100vw - 40px);height:auto;aspect-ratio:16/9}}
