@@ -88,3 +88,18 @@ footer{width:100%;padding:20px 16px;background:var(--navy);border-top:4px solid 
  .poster-zoom-viewport{width:calc(100vw - 40px);height:68vh}
  .poster-zoom-controls small{display:none}
 }
+
+/* Personal greeting, resilient Drive images and gallery-to-judging action. */
+.judge-greeting{margin:0 4px 12px;color:var(--navy);font-size:clamp(1rem,2vw,1.22rem);font-weight:800}
+.gallery-image-error{display:none;position:absolute;inset:0;place-items:center;padding:18px;color:var(--muted);font-size:.72rem;text-align:center}
+.gallery-img.image-unavailable .gallery-image-error{display:grid}
+.gallery-img.image-unavailable{background:linear-gradient(145deg,#edf1f6,#e4eaf2)}
+.modal-image-state{position:absolute;z-index:1;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;padding:24px;color:#dbe5f4;text-align:center;background:#0b1422}
+.modal-image-state>div{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.modal-image-state a{text-decoration:none}
+.poster-zoom-viewport{position:relative}
+.poster-zoom-viewport img{position:relative;z-index:2}
+.modal-poster-status{margin:13px 0 4px;color:#d3dceb}
+.modal-judge-btn{width:100%;margin-top:14px}
+#posterModalInfo .confirm-scores{margin-top:14px}
+@media(max-width:560px){.judge-greeting{margin-left:2px;font-size:1rem}.modal-image-state>div{display:grid}.modal-image-state .secondary-btn{width:100%}}

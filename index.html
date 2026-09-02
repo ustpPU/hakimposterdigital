@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="puice-logo.png" as="image" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260901b">
+  <link rel="stylesheet" href="styles.css?v=20260902a">
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -73,6 +73,7 @@
     </nav>
 
     <section id="judgingTab" class="tab-panel active">
+      <p id="judgeGreeting" class="judge-greeting"></p>
       <div class="progress-card">
         <div class="progress-copy"><div><p class="eyebrow">KEMAJUAN ANDA</p><strong id="progressText">0 daripada 0 poster selesai</strong></div><span id="progressPercent">0%</span></div>
         <div class="progress-track"><span id="progressBar"></span></div>
@@ -134,10 +135,10 @@
 
   <dialog id="confirmDialog" class="modal"><div class="modal-card confirm-card"><button id="confirmClose" class="modal-close" aria-label="Tutup">×</button><p class="eyebrow">SEMAK SEBELUM HANTAR</p><h2>Pengesahan markah</h2><div id="confirmMeta" class="confirm-meta"></div><div id="confirmScores" class="confirm-scores"></div><div class="confirm-total"><span>Jumlah keseluruhan</span><strong id="confirmTotal">0/100</strong></div><div id="saveProgress" class="save-progress hidden"><div class="save-progress-head"><span id="saveProgressLabel">Menyediakan simpanan…</span><strong id="saveProgressPercent">0%</strong></div><div class="save-progress-track"><span id="saveProgressBar"></span></div></div><div class="modal-actions"><button id="confirmCancel" class="secondary-btn" type="button">Kembali</button><button id="confirmSubmit" class="primary-btn" type="button">Ya, Simpan Markah</button></div><p id="submitStatus" class="submit-status" aria-live="polite"></p></div></dialog>
 
-  <dialog id="posterDialog" class="modal poster-modal"><div class="poster-modal-card"><button id="posterModalClose" class="modal-close" aria-label="Tutup">×</button><div id="posterZoomViewport" class="poster-zoom-viewport"><img id="posterModalImage" alt="Paparan poster bersaiz besar"></div><div class="poster-zoom-controls" aria-label="Kawalan zum poster"><button id="posterZoomOut" type="button" aria-label="Kecilkan poster">−</button><button id="posterZoomReset" type="button">100%</button><button id="posterZoomIn" type="button" aria-label="Besarkan poster">+</button><small>Cubit, seret atau tekan dua kali untuk zum</small></div><div id="posterModalInfo"></div></div></dialog>
+  <dialog id="posterDialog" class="modal poster-modal"><div class="poster-modal-card"><button id="posterModalClose" class="modal-close" aria-label="Tutup">×</button><div id="posterZoomViewport" class="poster-zoom-viewport"><div id="posterModalLoading" class="modal-image-state">Memuatkan poster…</div><div id="posterModalError" class="modal-image-state hidden"><strong>Poster belum dapat dimuatkan.</strong><div><button id="posterModalRetry" class="secondary-btn" type="button">Cuba Semula</button><a id="posterModalDrive" class="secondary-btn" target="_blank" rel="noopener">Buka di Google Drive</a></div></div><img id="posterModalImage" alt="Paparan poster bersaiz besar" referrerpolicy="no-referrer"></div><div class="poster-zoom-controls" aria-label="Kawalan zum poster"><button id="posterZoomOut" type="button" aria-label="Kecilkan poster">−</button><button id="posterZoomReset" type="button">100%</button><button id="posterZoomIn" type="button" aria-label="Besarkan poster">+</button><small>Cubit, seret atau tekan dua kali untuk zum</small></div><div id="posterModalInfo"></div></div></dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
-  <script src="app.js?v=20260901b" defer></script>
+  <script src="app.js?v=20260902a" defer></script>
 </body>
 </html>
