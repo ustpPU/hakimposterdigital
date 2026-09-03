@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="puice-logo.png" as="image" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260902e">
+  <link rel="stylesheet" href="styles.css?v=20260902f">
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -98,9 +98,10 @@
 
           <div class="score-section">
             <div class="section-heading"><div><p class="eyebrow">RUBRIK PENILAIAN</p><h3>Lima aspek · maksimum 100 markah</h3></div><div id="floatingTotal" class="total-orb"><strong>0</strong><span>/100</span></div></div>
+            <div class="score-toolbar"><p>Poster tidak memenuhi syarat pertandingan?</p><button id="dqBtn" class="danger-btn" type="button">Tandakan DQ</button></div>
             <div id="rubricList" class="rubric-list"></div>
           </div>
-          <div class="submit-row"><button id="dqBtn" class="danger-btn" type="button">Tandakan DQ</button><p id="incompleteHint">Lengkapkan semua lima aspek untuk menghantar.</p><button id="submitBtn" class="primary-btn" type="button" disabled>Semak & Hantar <span>→</span></button></div>
+          <div class="submit-row"><p id="incompleteHint">Lengkapkan semua lima aspek untuk menghantar.</p><button id="submitBtn" class="primary-btn" type="button" disabled>Semak & Hantar <span>→</span></button></div>
         </article>
 
         <section id="completionCard" class="completion-card hidden">
@@ -142,6 +143,6 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
-  <script src="app.js?v=20260902e" defer></script>
+  <script src="app.js?v=20260902f" defer></script>
 </body>
 </html>

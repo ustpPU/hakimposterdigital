@@ -126,12 +126,16 @@ footer{width:100%;padding:20px 16px;background:var(--navy);border-top:4px solid 
 .poster-modal{width:min(96vw,1050px);max-width:none;max-height:94dvh;overflow:hidden}
 .poster-modal-card{max-height:94dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
 .poster-modal-card .modal-close{position:sticky;z-index:30;top:0;display:grid;place-items:center;margin:0 0 -33px auto;background:#fff;color:var(--navy);box-shadow:0 5px 18px rgba(0,0,0,.3)}
-.poster-zoom-viewport{max-height:calc(94dvh - 120px)}
+.poster-zoom-viewport{width:min(90vw,980px,calc((94dvh - 120px)*16/9));max-height:none;aspect-ratio:16/9}
+.poster-zoom-viewport img{width:auto;height:auto;max-width:100%;max-height:100%;place-self:center;object-fit:contain}
+.modal-drive-preview{transform-origin:center;transition:transform .12s ease}
+.modal-drive-preview iframe{pointer-events:none}
+.score-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:-4px 0 16px;padding:12px 14px;border:1px solid #efd1d4;border-radius:14px;background:#fff8f8}.score-toolbar p{margin:0;color:#75464b;font-size:.73rem;font-weight:700}.score-toolbar .danger-btn{flex:0 0 auto}
 @media(max-width:850px){
  .summary-table tr{grid-template-columns:72px minmax(0,1fr) 82px}
  .summary-table td:nth-child(1){grid-column:1}.summary-table td:nth-child(2){grid-column:2}.summary-table td:nth-child(3){grid-column:1/-1}.summary-table td:nth-child(4){grid-column:1/3;background:#f5f7fb;text-align:left}.summary-table td:nth-child(5){grid-column:3;background:#f5f7fb;text-align:right}
 }
 @media(max-width:560px){
- .submit-row{display:grid;grid-template-columns:auto 1fr}.submit-row p{grid-column:1/-1;grid-row:1;margin:0;max-width:none}.submit-row .danger-btn{grid-column:1;grid-row:2}.submit-row .primary-btn{grid-column:2;grid-row:2}
- .poster-modal{width:calc(100vw - 12px);max-height:96dvh}.poster-modal-card{max-height:96dvh;padding:8px}.poster-zoom-viewport{width:100%;max-height:calc(96dvh - 110px)}
+ .submit-row{display:flex}.submit-row p{margin:0;max-width:none}.score-toolbar{align-items:flex-start}.score-toolbar p{padding-top:4px}.score-toolbar .danger-btn{padding:9px 11px}
+ .poster-modal{width:calc(100vw - 12px);max-height:96dvh}.poster-modal-card{max-height:96dvh;padding:8px}.poster-zoom-viewport{width:min(100%,calc((96dvh - 110px)*16/9));max-height:none;aspect-ratio:16/9}
 }
