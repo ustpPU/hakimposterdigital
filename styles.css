@@ -11,6 +11,9 @@
 .mini-brand{width:62px;height:62px}
 .brand-mark img,.mini-brand img{display:block;width:100%;height:100%;object-fit:contain}
 .rubric-item{scroll-margin-top:96px}
+.judging-closed-banner{display:flex;align-items:flex-start;gap:13px;margin:0 0 18px;padding:15px 18px;border:1px solid #f2cf85;border-radius:16px;background:#fff8e8;color:#6f4b00;box-shadow:0 10px 30px rgba(111,75,0,.08)}
+.judging-closed-banner>span{font-size:1.25rem}.judging-closed-banner strong{display:block;margin-bottom:3px}.judging-closed-banner p{margin:0;font-size:.76rem;line-height:1.5}
+.judging-locked .score-section{background:#f8f9fb}.judging-locked .rubric-item{opacity:.68}.judging-locked .rubric-item button,.judging-locked .score-toolbar button{cursor:not-allowed}.judging-locked .submit-row{background:rgba(245,247,250,.96)}
 
 /* Live judging flow and compact mobile results. */
 .poster-card{scroll-margin-top:86px}
